@@ -1,0 +1,8 @@
+header:
+  version: 14
+
+local_conf_header:
+  harfbuzz-native-link-runtime: |
+    # HarfBuzz's native Meson build links a mixed C/C++ library with gcc.
+    # Add the C++ runtime directly to Meson's C linker arguments for this recipe.
+    EXTRA_OEMESON:append:pn-harfbuzz-native = " -Dc_link_args=-lstdc++"

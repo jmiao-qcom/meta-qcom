@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/siemens/kas/master/kas/schema-kas.json
+
+header:
+  version: 14
+  includes:
+  - ci/base.yml
+
+machine: eliza-mtp
+
+local_conf_header:
+  eliza-mtp-kernel-externalsrc: |
+    INHERIT += "externalsrc"
+    EXTERNALSRC:pn-linux-qcom-next = "/local/mnt/workspace/eliza/eliza_ai_ws/worktrees/eliza-wcn7750-port-review"
